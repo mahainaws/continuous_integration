@@ -4,7 +4,7 @@ pipeline {
 		stage("Clone") {
 			steps {
 				echo 'Clone is in Progress'
-				sleep 4
+				sleep 5
 				echo 'Clone is Completed'
 			}
 		}
