@@ -44,7 +44,7 @@ pipeline {
 		stage("Packaging") {
 			steps {
 				echo 'Packaging in Progress'
-				sleep 3
+				sleep 4
 				echo 'Packaging is completed'
 			}
 		}
