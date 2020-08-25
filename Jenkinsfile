@@ -12,7 +12,7 @@ pipeline {
 		stage("Compile") {
 			steps {
 				echo 'Code compilation is in Progress'
-				sleep 3
+				sleep 5
 				echo 'Compilation is Completed'
 			}
 		}
@@ -20,7 +20,7 @@ pipeline {
 		stage("Unit_Testing") {
 			steps {
 				echo 'Unit Testing is in Progress'
-				sleep 7
+				sleep 10
 				echo 'Unit Testing is Completed'
 			}
 		}
@@ -28,16 +28,16 @@ pipeline {
 		stage("Integration_Testing") {
 			steps {
 				echo 'Integration Testing is in Progress'
-				sleep 4
+				sleep 7
 				echo 'Integration Testing is Completed'
 			}
 		}
 
-		stage("Test_Coverage") {
+		stage("Code_Coverage") {
 			steps {
-				echo 'Test Coverage in Progress'
-				sleep 5
-				echo 'Test Coverage is Completed'
+				echo 'Code Coverage in Progress'
+				sleep 6
+				echo 'Code Coverage is Completed'
 			}
 		}
 		
