@@ -3,9 +3,9 @@ pipeline {
 	stages {
 		stage("Clone") {
 			steps {
-				echo 'Clone is in Progress'
+				echo 'Code is being pulled from GitHub'
 				sleep 6
-				echo 'Clone is Completed'
+				echo 'Cloning is Completed'
 			}
 		}
 		
@@ -17,27 +17,19 @@ pipeline {
 			}
 		}
 		
-		stage("Unit_Testing") {
+		stage("Unit Testing") {
 			steps {
 				echo 'Unit Testing is in Progress'
-				sleep 11
+				sleep 8
 				echo 'Unit Testing is Completed'
 			}
 		}
 		
-		stage("Integration_Testing") {
+		stage("Integration Testing") {
 			steps {
 				echo 'Integration Testing is in Progress'
-				sleep 7
+				sleep 11
 				echo 'Integration Testing is Completed'
-			}
-		}
-
-		stage("Code_Coverage") {
-			steps {
-				echo 'Code Coverage in Progress'
-				sleep 6
-				echo 'Code Coverage is Completed'
 			}
 		}
 		
@@ -46,6 +38,14 @@ pipeline {
 				echo 'Packaging in Progress'
 				sleep 4
 				echo 'Packaging is completed'
+			}
+		}
+		
+		stage("Push Artifacts") {
+			steps {
+				echo 'Pushing Artifacts to Nexus'
+				sleep 5
+				echo 'Artifcats are pushed to Nexus'
 			}
 		}
 }
