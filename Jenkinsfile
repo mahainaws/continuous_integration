@@ -48,5 +48,13 @@ pipeline {
 				echo 'Artifcats are pushed to Nexus'
 			}
 		}
+		
+		stage("Send Notification") {
+			steps {
+				echo 'Sending notification to team'
+				sleep 5
+				echo 'Notifications are sent to team'
+			}
+		}
 }
 }
